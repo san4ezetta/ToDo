@@ -1,3 +1,3 @@
-Стяните репо себе на тачку<br>
-чиркаете в консольку `npm install`<br>
-потом в ту же маляву вводите `node server.js`
+ `npm install`<br>
+ `+`<br>
+ `node server.js`
