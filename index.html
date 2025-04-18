@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="offline-status" class="offline">Офлайн-режим</div>
+        <h1>ToDo</h1>
+
+        <div class="controls">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="active">Активные</button>
+                <button class="filter-btn" data-filter="completed">Выполненные</button>
+            </div>
+            <button id="notifications-btn">Включить уведомления</button>
+        </div>
+
+        <div class="input-group">
+            <textarea id="note-input" placeholder="Введите текст..."></textarea>
+            <button id="add-btn">Добавить</button>
+        </div>
+
+        <div id="notes-list"></div>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+
+</html>

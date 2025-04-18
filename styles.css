@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.offline {
+    display: none;
+    background: #d32f2f;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.offline.active {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00e5ff;
+    text-shadow: 0 0 5px #00e5ff;
+}
+
+.input-group {
+    margin-bottom: 30px;
+}
+
+#note-input {
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 16px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    outline: none;
+    box-shadow: 0 0 0 2px #333;
+}
+
+#note-input:focus {
+    box-shadow: 0 0 5px 2px #00e5ff;
+}
+
+#add-btn {
+    width: 100%;
+    padding: 12px;
+    background: #00e676;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#add-btn:hover {
+    background: #00c853;
+    transform: translateY(-1px);
+}
+
+.note-card {
+    background: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00e5ff33;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.note-card:hover {
+    transform: scale(1.01);
+}
+
+.note-text {
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: #ff5252;
+    border: 1px solid #ff5252;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.delete-btn:hover {
+    background: #ff1744;
+    color: white;
+}
+
+.complete-btn {
+    background: transparent;
+    color: #00e676;
+    border: 1px solid #00e676;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+.complete-btn:hover {
+    background: #00c853;
+    color: black;
+}
+
+.note-card.completed {
+    opacity: 0.6;
+    border-left: 4px solid #00e676;
+}
+
+.note-card.completed .note-text {
+    text-decoration: line-through;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background: #2c2c2c;
+    color: #ccc;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background: #444;
+}
+
+.filter-btn.active {
+    background: #00e676;
+    color: black;
+    border-color: #00e676;
+}
+
+#notifications-btn {
+    padding: 8px 16px;
+    background: #3b588a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#notifications-btn:hover {
+    background: #1565c0;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    #note-input {
+        height: 80px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
